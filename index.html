@@ -3,1042 +3,2622 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Neervaah Films - Wedding photography and cinematography in Mumbai, Pune and destinations across all over India. Professional pre-wedding shoots, maternity photography, baby shower photography, and commercial videography services. Capture your special moments with India's leading photography studio.">
-    <meta name="keywords" content="wedding photography Mumbai Pune, pre wedding shoot Mumbai Pune, maternity photography Mumbai Pune, baby shower photography Mumbai Pune, cinematography services Mumbai Pune, professional photographer Mumbai Pune, Indian wedding photography, event photography Mumbai Pune, album design, Neervaah Films">
+    <meta name="description" content="Neervaah Films offers professional wedding photography, cinematography, pre-wedding, maternity, baby and event photography in Mumbai, Pune and destinations across India.">
+    <meta name="keywords" content="wedding photography Mumbai Pune, pre wedding shoot Mumbai Pune, maternity photography Mumbai Pune, baby shower photography, cinematography, Indian wedding photographer, Neervaah Films">
     <meta name="author" content="Neervaah Films">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Neervaah Films | Professional Wedding Photography & Cinematography in Mumbai, Pune and destinations across India">
-    <meta property="og:description" content="Neervaah Films - Wedding photography and cinematography in Mumbai, Pune and Destinations Across India. Professional pre-wedding shoots, maternity photography, baby shower photography, and commercial videography services. Capture your special moments with India's leading photography studio.">
+    <meta name="theme-color" content="#071a2a">
+
+    <meta property="og:title" content="Neervaah Films | Wedding Photography & Cinematography">
+    <meta property="og:description" content="Timeless wedding photography, cinematic films and meaningful visual stories across India.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.neervaahfilms.in">
     <meta property="og:image" content="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/metaimage.jpeg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Neervaah Films | Professional Wedding Photography & Cinematography in Mumbai, Pune and destinations across India">
-    <meta name="twitter:description" content="Neervaah Films - Wedding photography and cinematography in Mumbai, Pune and Destinations Across India. Professional pre-wedding shoots, maternity photography, baby shower photography, and commercial videography services. Capture your special moments with India's leading photography studio.">
+    <meta name="twitter:title" content="Neervaah Films | Wedding Photography & Cinematography">
+    <meta name="twitter:description" content="Timeless wedding photography, cinematic films and meaningful visual stories across India.">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/metaimage.jpeg">
+
     <link rel="canonical" href="https://www.neervaahfilms.in">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/vHk6wFqs/favicon.png">
-    <title>Neervaah Films | Professional Wedding Photography & Cinematography in Mumbai, Pune and Destination Shoot Accross India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Neervaah Films | Professional Wedding Photography & Cinematography</title>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --ink: #03111d;
+            --navy: #071a2a;
+            --navy-soft: #0b2438;
+            --navy-card: rgba(12, 39, 59, 0.78);
+            --gold: #d2ad6d;
+            --gold-light: #efd39d;
+            --ivory: #f7f2e9;
+            --silver: #c6d0d8;
+            --muted: #91a2b0;
+            --line: rgba(239, 211, 157, 0.18);
+            --white-line: rgba(255, 255, 255, 0.10);
+            --shadow: 0 22px 65px rgba(0, 0, 0, 0.30);
+            --radius-lg: 28px;
+            --radius-md: 18px;
+            --header-height: 88px;
+            --container: 1380px;
         }
 
-        :root {
-            --navy-blue: #001f3f;
-            --silver: #dddddd;
-            --off-white: #f2f2f2;
-            --accent-gold: #c9a961;
-            --dark-gray: #2c3e50;
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-height) + 18px);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            min-width: 320px;
+            overflow-x: hidden;
+            font-family: "Manrope", sans-serif;
+            line-height: 1.7;
             color: var(--silver);
-            background-color: var(--navy-blue);
+            background:
+                radial-gradient(circle at 15% 8%, rgba(210, 173, 109, 0.10), transparent 25%),
+                radial-gradient(circle at 90% 45%, rgba(46, 110, 145, 0.12), transparent 28%),
+                var(--ink);
+            -webkit-font-smoothing: antialiased;
         }
 
-        header {
+        body.menu-open,
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        ::selection {
+            color: var(--ink);
+            background: var(--gold-light);
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--gold-light);
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: fixed;
+            top: 12px;
+            left: 12px;
+            z-index: 9999;
+            padding: 0.7rem 1rem;
+            color: var(--ink);
+            background: var(--ivory);
+            border-radius: 999px;
+            transform: translateY(-150%);
+            transition: transform 0.25s ease;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .container {
+            width: min(calc(100% - 40px), var(--container));
+            margin-inline: auto;
+        }
+
+        .section {
+            position: relative;
+            padding: 112px 0;
+        }
+
+        .section-header {
+            max-width: 820px;
+            margin: 0 auto 52px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin-bottom: 12px;
+            color: var(--gold-light);
+            font-size: 0.73rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        h1, h2, h3 {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--ivory);
+            line-height: 1.08;
+        }
+
+        h2 {
+            font-size: clamp(2.7rem, 5vw, 5rem);
+            font-weight: 600;
+            letter-spacing: -0.025em;
+        }
+
+        .section-copy {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--muted);
+            font-size: 1.02rem;
+        }
+
+        .gold-text {
+            color: var(--gold-light);
+        }
+
+        .scroll-progress {
+            position: fixed;
+            inset: 0 auto auto 0;
+            z-index: 4000;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            box-shadow: 0 0 14px rgba(210, 173, 109, 0.65);
+        }
+
+        .preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 5000;
+            display: grid;
+            place-items: center;
+            background: var(--ink);
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+
+        .preloader.is-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-inner {
+            display: grid;
+            place-items: center;
+            gap: 22px;
+        }
+
+        .preloader img {
+            width: min(230px, 56vw);
+            animation: breathe 1.6s ease-in-out infinite;
+        }
+
+        .preloader-line {
+            width: 170px;
+            height: 2px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .preloader-line::after {
+            content: "";
+            display: block;
+            width: 45%;
+            height: 100%;
+            background: var(--gold);
+            animation: loadingLine 1.2s ease-in-out infinite;
+        }
+
+        .site-header {
             position: fixed;
             top: 0;
-            width: 100%;
-            background: rgba(0, 31, 63, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        nav {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 50px;
-            width: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--silver);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .nav-links a:hover::after {
+            z-index: 2000;
             width: 100%;
+            height: var(--header-height);
+            border-bottom: 1px solid transparent;
+            transition: height 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .site-header.is-scrolled {
+            height: 76px;
+            background: rgba(3, 17, 29, 0.88);
+            border-color: var(--white-line);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: auto;
+            height: 58px;
+            object-fit: contain;
+            transition: height 0.35s ease;
+        }
+
+        .site-header.is-scrolled .brand img {
+            height: 48px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 34px;
+            list-style: none;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 10px 0;
+            color: rgba(247, 242, 233, 0.82);
+            font-size: 0.93rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            left: 0;
+            height: 1px;
+            background: var(--gold-light);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold-light);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 46px;
+            padding: 0 22px;
+            color: var(--ink);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 999px;
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-decoration: none;
+            box-shadow: 0 10px 24px rgba(210, 173, 109, 0.18);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(210, 173, 109, 0.30);
         }
 
         .menu-toggle {
             display: none;
-            flex-direction: column;
+            width: 46px;
+            height: 46px;
+            border: 1px solid var(--white-line);
+            border-radius: 50%;
+            color: var(--ivory);
+            background: rgba(255, 255, 255, 0.05);
             cursor: pointer;
         }
 
         .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: var(--silver);
-            margin: 3px 0;
-            transition: 0.3s;
+            display: block;
+            width: 19px;
+            height: 1.5px;
+            margin: 5px auto;
+            background: currentColor;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-        #home {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0, 31, 63, 0.7), rgba(0, 31, 63, 0.7)), 
-                        url('https://i.postimg.cc/0y74sZy6/Gemini-Generated-Image-j20j8ij20j8ij20j.png?w=1920') center/cover no-repeat;
+        .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+            transform: translateY(6.5px) rotate(45deg);
+        }
+
+        .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+            transform: translateY(-6.5px) rotate(-45deg);
+        }
+
+        .hero {
             position: relative;
+            min-height: 100svh;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .hero-slides,
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-slide {
+            background-image: var(--hero-image);
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            transform: scale(1.08);
+            transition: opacity 1.5s ease, transform 7s linear;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(90deg, rgba(3, 17, 29, 0.94) 0%, rgba(3, 17, 29, 0.72) 44%, rgba(3, 17, 29, 0.30) 100%),
+                linear-gradient(0deg, var(--ink) 0%, transparent 30%);
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background-image: linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+            background-size: 56px 56px;
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 75%);
         }
 
         .hero-content {
-            max-width: 950px;
-            padding: 2rem;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: var(--off-white);
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero-content p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: var(--silver);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: var(--accent-gold);
-            color: var(--navy-blue);
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.3);
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(201, 169, 97, 0.5);
-        }
-
-        section {
-            padding: 5rem 4rem;
-            width: 100%;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--off-white);
             position: relative;
+            z-index: 2;
+            width: min(100%, 970px);
+            margin-right: auto;
+            padding-top: var(--header-height);
         }
 
-        h2::after {
-            content: '';
+        .hero-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+            color: var(--gold-light);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.23em;
+            text-transform: uppercase;
+            animation: heroEnter 0.9s 0.2s both;
+        }
+
+        .hero-kicker::before {
+            content: "";
+            width: 42px;
+            height: 1px;
+            background: currentColor;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+            font-size: clamp(3.5rem, 8vw, 7.8rem);
+            font-weight: 600;
+            letter-spacing: -0.045em;
+            text-wrap: balance;
+            animation: heroEnter 0.9s 0.35s both;
+        }
+
+        .hero-copy {
+            max-width: 720px;
+            margin-top: 24px;
+            color: rgba(230, 237, 242, 0.82);
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            animation: heroEnter 0.9s 0.5s both;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 36px;
+            animation: heroEnter 0.9s 0.65s both;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 11px;
+            min-height: 56px;
+            padding: 0 27px;
+            border: 1px solid transparent;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-decoration: none;
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .button-primary {
+            color: var(--ink);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            box-shadow: 0 14px 34px rgba(210, 173, 109, 0.23);
+        }
+
+        .button-secondary {
+            color: var(--ivory);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.20);
+            backdrop-filter: blur(10px);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-primary:hover {
+            box-shadow: 0 18px 38px rgba(210, 173, 109, 0.35);
+        }
+
+        .button-secondary:hover {
+            color: var(--gold-light);
+            border-color: rgba(239, 211, 157, 0.55);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        .hero-note {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 34px;
+            color: var(--muted);
+            font-size: 0.84rem;
+            animation: heroEnter 0.9s 0.8s both;
+        }
+
+        .hero-note span {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .hero-note i {
+            color: var(--gold);
+        }
+
+        .scroll-cue {
+            position: absolute;
+            right: 34px;
+            bottom: 38px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.62);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-decoration: none;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+        }
+
+        .scroll-cue::after {
+            content: "";
+            width: 1px;
+            height: 62px;
+            background: linear-gradient(var(--gold), transparent);
+            animation: scrollLine 1.8s ease-in-out infinite;
+        }
+
+        .trust-strip {
+            position: relative;
+            z-index: 4;
+            margin-top: -1px;
+            border-top: 1px solid var(--white-line);
+            border-bottom: 1px solid var(--white-line);
+            background: rgba(7, 26, 42, 0.78);
+            backdrop-filter: blur(16px);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            min-height: 110px;
+            padding: 24px;
+            border-right: 1px solid var(--white-line);
+            text-align: left;
+        }
+
+        .trust-item:last-child {
+            border-right: 0;
+        }
+
+        .trust-item i {
+            color: var(--gold);
+            font-size: 1.25rem;
+        }
+
+        .trust-item strong {
             display: block;
-            width: 80px;
-            height: 3px;
-            background: var(--accent-gold);
-            margin: 1rem auto;
+            color: var(--ivory);
+            font-size: 0.94rem;
+        }
+
+        .trust-item span {
+            color: var(--muted);
+            font-size: 0.76rem;
+        }
+
+        .services-section {
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: "";
+            position: absolute;
+            top: 5%;
+            right: -12%;
+            width: 520px;
+            height: 520px;
+            border: 1px solid rgba(210, 173, 109, 0.10);
+            border-radius: 50%;
+            box-shadow: 0 0 0 80px rgba(210, 173, 109, 0.025), 0 0 0 160px rgba(210, 173, 109, 0.018);
+            pointer-events: none;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
         }
 
         .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid rgba(221, 221, 221, 0.1);
+            position: relative;
             overflow: hidden;
+            border: 1px solid var(--white-line);
+            border-radius: var(--radius-lg);
+            background: linear-gradient(145deg, rgba(12, 39, 59, 0.92), rgba(6, 25, 40, 0.92));
+            box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
+            transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.2);
+            border-color: rgba(239, 211, 157, 0.35);
+            box-shadow: var(--shadow);
+        }
+
+        .service-media {
+            position: relative;
+            height: 260px;
+            overflow: hidden;
+        }
+
+        .service-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(3, 17, 29, 0.68), transparent 55%);
         }
 
         .service-image {
             width: 100%;
-            height: 200px;
+            height: 100%;
             object-fit: cover;
-            display: block;
+            transition: transform 0.8s cubic-bezier(.2,.8,.2,1), filter 0.5s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.075);
+            filter: saturate(1.08) contrast(1.03);
+        }
+
+        .service-icon {
+            position: absolute;
+            right: 20px;
+            bottom: 18px;
+            z-index: 2;
+            display: grid;
+            width: 48px;
+            height: 48px;
+            place-items: center;
+            color: var(--ink);
+            background: var(--gold-light);
+            border-radius: 50%;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
         }
 
         .service-content {
-            padding: 2rem;
+            padding: 28px;
         }
 
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--accent-gold);
+        .service-content h3 {
+            margin-bottom: 12px;
+            font-size: 2rem;
+            font-weight: 600;
         }
 
-        .service-card p {
+        .service-content > p:not(.eyebrow) {
+            min-height: 82px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        .text-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            color: var(--gold-light);
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .text-link i {
+            transition: transform 0.25s ease;
+        }
+
+        .text-link:hover i {
+            transform: translateX(5px);
+        }
+
+        .process-section {
+            background: linear-gradient(180deg, rgba(7, 26, 42, 0.35), rgba(7, 26, 42, 0.68));
+            border-top: 1px solid var(--white-line);
+            border-bottom: 1px solid var(--white-line);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 26px;
+            counter-reset: process;
+        }
+
+        .process-card {
+            position: relative;
+            min-height: 250px;
+            padding: 34px;
+            overflow: hidden;
+            border: 1px solid var(--white-line);
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.025);
+            counter-increment: process;
+        }
+
+        .process-card::before {
+            content: "0" counter(process);
+            position: absolute;
+            top: -18px;
+            right: 18px;
+            color: rgba(239, 211, 157, 0.08);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 7.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .process-card i {
+            color: var(--gold);
+            font-size: 1.7rem;
+        }
+
+        .process-card h3 {
+            margin: 30px 0 12px;
+            font-size: 2rem;
+        }
+
+        .process-card p {
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .gallery-section {
+            overflow: hidden;
+        }
+
+        .gallery-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: -8px 0 42px;
+        }
+
+        .gallery-filter {
+            padding: 10px 18px;
             color: var(--silver);
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid var(--white-line);
+            border-radius: 999px;
+            font-size: 0.79rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
         }
 
-        #gallery {
-            background: rgba(0, 0, 0, 0.2);
+        .gallery-filter:hover,
+        .gallery-filter.active {
+            color: var(--ink);
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            transform: translateY(-2px);
         }
 
-        /* New Masonry Gallery Styles */
+        .instagram-line {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .instagram-line a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
         .gallery-masonry {
             column-count: 4;
-            column-gap: 1rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            column-gap: 18px;
         }
 
         .gallery-item {
             position: relative;
-            break-inside: avoid;
-            margin-bottom: 1rem;
-            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 18px;
             overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            break-inside: avoid;
+            border: 1px solid var(--white-line);
+            border-radius: 20px;
+            background: var(--navy-soft);
+            cursor: zoom-in;
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+            transform: translateZ(0);
         }
 
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(201, 169, 97, 0.3);
+        .gallery-item.is-hidden {
+            display: none;
         }
 
         .gallery-item img {
+            display: block;
             width: 100%;
             height: auto;
-            display: block;
-            transition: transform 0.5s ease;
+            min-height: 220px;
+            object-fit: cover;
+            opacity: 0;
+            transform: scale(1.025);
+            transition: opacity 0.55s ease, transform 0.85s cubic-bezier(.2,.8,.2,1), filter 0.5s ease;
+        }
+
+        .gallery-item img.is-loaded {
+            opacity: 1;
         }
 
         .gallery-item:hover img {
-            transform: scale(1.05);
+            transform: scale(1.07);
+            filter: saturate(1.08) contrast(1.03);
         }
 
         .gallery-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 31, 63, 0.8);
+            inset: 0;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 24px;
+            background: linear-gradient(180deg, transparent 38%, rgba(3, 17, 29, 0.88));
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.35s ease;
         }
 
-        /* .gallery-item:hover .gallery-overlay {
+        .gallery-item:hover .gallery-overlay,
+        .gallery-item:focus-within .gallery-overlay {
             opacity: 1;
-        } */
-
-        .gallery-overlay span {
-            color: var(--accent-gold);
-            font-size: 1.2rem;
-            font-weight: bold;
         }
 
-        /* Lightbox Styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        .gallery-label {
+            color: var(--ivory);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.55rem;
+            font-weight: 600;
+        }
+
+        .gallery-view {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            color: var(--ink);
+            background: var(--gold-light);
+            border-radius: 50%;
+        }
+
+        .gallery-item.image-error {
+            min-height: 260px;
+            cursor: default;
+        }
+
+        .gallery-item.image-error::before {
+            content: "Image unavailable";
+            position: absolute;
+            inset: 0;
+            display: grid;
+            place-items: center;
+            color: var(--muted);
+            background: linear-gradient(135deg, var(--navy-soft), var(--ink));
+        }
+
+        .films-wrap {
+            margin-top: 100px;
+        }
+
+        .films-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 26px;
+        }
+
+        .film-card {
+            overflow: hidden;
+            border: 1px solid var(--white-line);
+            border-radius: var(--radius-lg);
+            background: rgba(7, 26, 42, 0.78);
+            box-shadow: 0 18px 48px rgba(0, 0, 0, 0.20);
+            transition: transform 0.35s ease, border-color 0.35s ease;
+        }
+
+        .film-card:hover {
+            transform: translateY(-7px);
+            border-color: rgba(239, 211, 157, 0.32);
+        }
+
+        .video-frame {
+            position: relative;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 2000;
+            border: 0;
+        }
+
+        .film-meta {
+            padding: 24px 26px 28px;
+        }
+
+        .film-meta span {
+            display: inline-flex;
             align-items: center;
+            gap: 9px;
+            color: var(--gold);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .film-meta h3 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+        }
+
+        .about-section {
+            border-top: 1px solid var(--white-line);
+            background:
+                linear-gradient(90deg, rgba(3, 17, 29, 0.20), rgba(3, 17, 29, 0.84)),
+                radial-gradient(circle at 12% 40%, rgba(210, 173, 109, 0.09), transparent 32%);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+            align-items: center;
+            gap: 72px;
+        }
+
+        .about-collage {
+            position: relative;
+            min-height: 640px;
+        }
+
+        .about-photo {
+            position: absolute;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-photo-main {
+            inset: 0 14% 9% 0;
+        }
+
+        .about-photo-small {
+            right: 0;
+            bottom: 0;
+            width: 43%;
+            height: 43%;
+            border: 8px solid var(--ink);
+        }
+
+        .about-badge {
+            position: absolute;
+            top: 38px;
+            right: 2px;
+            display: grid;
+            width: 138px;
+            height: 138px;
+            place-items: center;
+            padding: 16px;
+            color: var(--ink);
+            background: var(--gold-light);
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0 20px 38px rgba(0, 0, 0, 0.28);
+            animation: floatBadge 4s ease-in-out infinite;
+        }
+
+        .about-badge strong {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.55rem;
+            line-height: 1;
+        }
+
+        .about-copy h2 {
+            text-align: left;
+        }
+
+        .about-copy > p {
+            margin-top: 20px;
+            color: var(--muted);
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px 20px;
+            margin-top: 30px;
+        }
+
+        .about-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--silver);
+            font-size: 0.9rem;
+        }
+
+        .about-point i {
+            margin-top: 4px;
+            color: var(--gold);
+        }
+
+        .about-quote {
+            margin-top: 34px;
+            padding-left: 22px;
+            border-left: 2px solid var(--gold);
+            color: var(--gold-light);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.65rem;
+            font-style: italic;
+            line-height: 1.35;
+        }
+
+        .contact-section {
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -320px;
+            width: 850px;
+            height: 850px;
+            border: 1px solid rgba(210, 173, 109, 0.10);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 0 95px rgba(210, 173, 109, 0.018), 0 0 0 190px rgba(210, 173, 109, 0.012);
+            pointer-events: none;
+        }
+
+        .contact-shell {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            overflow: hidden;
+            border: 1px solid rgba(239, 211, 157, 0.22);
+            border-radius: 34px;
+            background:
+                linear-gradient(120deg, rgba(12, 39, 59, 0.97), rgba(5, 22, 35, 0.97)),
+                var(--navy-soft);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-main {
+            padding: clamp(42px, 6vw, 78px);
+        }
+
+        .contact-main h2 {
+            max-width: 720px;
+            text-align: left;
+        }
+
+        .contact-main > p {
+            max-width: 650px;
+            margin-top: 20px;
+            color: var(--muted);
+        }
+
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+            margin-top: 34px;
+        }
+
+        .contact-panel {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
+            padding: 50px;
+            border-left: 1px solid var(--white-line);
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .contact-list {
+            display: grid;
+            gap: 22px;
+        }
+
+        .contact-item {
+            display: grid;
+            grid-template-columns: 48px 1fr;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .contact-icon {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            place-items: center;
+            color: var(--ink);
+            background: var(--gold-light);
+            border-radius: 50%;
+        }
+
+        .contact-item span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .contact-item a,
+        .contact-item strong {
+            color: var(--ivory);
+            font-size: 0.95rem;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold-light);
+        }
+
+        .social-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        .social-row a {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            color: var(--ivory);
+            border: 1px solid var(--white-line);
+            border-radius: 50%;
+            text-decoration: none;
+            transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+        }
+
+        .social-row a:hover {
+            color: var(--ink);
+            background: var(--gold-light);
+            transform: translateY(-3px);
+        }
+
+        .site-footer {
+            border-top: 1px solid var(--white-line);
+            background: #020d16;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.1fr 0.7fr 0.7fr;
+            gap: 60px;
+            padding: 74px 0 48px;
+        }
+
+        .footer-brand img {
+            width: 240px;
+            max-width: 100%;
+        }
+
+        .footer-brand p {
+            max-width: 470px;
+            margin-top: 18px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .footer-column ul {
+            display: grid;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .footer-column a {
+            color: var(--muted);
+            font-size: 0.88rem;
+            text-decoration: none;
+            transition: color 0.2s ease, padding-left 0.2s ease;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold-light);
+            padding-left: 4px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 24px 0;
+            border-top: 1px solid var(--white-line);
+            color: var(--muted);
+            font-size: 0.78rem;
+        }
+
+        .whatsapp-float,
+        .back-to-top {
+            position: fixed;
+            right: 24px;
+            z-index: 1500;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+            transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        .whatsapp-float {
+            bottom: 24px;
+            width: 60px;
+            height: 60px;
+            color: #fff;
+            background: #25d366;
+            font-size: 1.8rem;
+        }
+
+        .whatsapp-float::before {
+            content: "";
+            position: absolute;
+            inset: -8px;
+            border: 1px solid rgba(37, 211, 102, 0.40);
+            border-radius: 50%;
+            animation: pulseRing 2s ease-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        .back-to-top {
+            bottom: 96px;
+            width: 46px;
+            height: 46px;
+            color: var(--ivory);
+            background: rgba(7, 26, 42, 0.92);
+            border: 1px solid var(--white-line);
+            opacity: 0;
+            visibility: hidden;
+            cursor: pointer;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            color: var(--ink);
+            background: var(--gold-light);
+            transform: translateY(-3px);
+        }
+
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 4500;
+            display: grid;
+            place-items: center;
+            padding: 34px;
+            color: var(--ivory);
+            background: rgba(0, 6, 12, 0.96);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
         }
 
         .lightbox.active {
-            display: flex;
+            opacity: 1;
+            visibility: visible;
         }
 
-        .lightbox-content {
+        .lightbox-stage {
             position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: min(1180px, 100%);
+            height: min(82vh, 860px);
+            display: grid;
+            place-items: center;
         }
 
         .lightbox-image {
             max-width: 100%;
-            max-height: 90vh;
+            max-height: 100%;
             object-fit: contain;
-            border-radius: 5px;
+            border-radius: 12px;
+            box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            z-index: 2;
+            display: grid;
+            place-items: center;
+            color: var(--ivory);
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            border-radius: 50%;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            color: var(--ink);
+            background: var(--gold-light);
         }
 
         .lightbox-close {
-            position: absolute;
             top: 20px;
-            right: 30px;
-            font-size: 3rem;
-            color: var(--silver);
-            cursor: pointer;
-            transition: color 0.3s ease;
-            z-index: 2001;
-        }
-
-        .lightbox-close:hover {
-            color: var(--accent-gold);
+            right: 20px;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
         }
 
         .lightbox-prev,
         .lightbox-next {
-            position: absolute;
             top: 50%;
+            width: 52px;
+            height: 52px;
+            font-size: 1.1rem;
             transform: translateY(-50%);
-            font-size: 3rem;
-            color: var(--silver);
-            cursor: pointer;
-            padding: 1rem;
-            background: rgba(0, 31, 63, 0.7);
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            user-select: none;
+        }
+
+        .lightbox-prev {
+            left: 18px;
+        }
+
+        .lightbox-next {
+            right: 18px;
         }
 
         .lightbox-prev:hover,
         .lightbox-next:hover {
-            color: var(--accent-gold);
-            background: rgba(0, 31, 63, 0.9);
+            transform: translateY(-50%) scale(1.05);
         }
 
-        .lightbox-prev {
-            left: 30px;
-        }
-
-        .lightbox-next {
-            right: 30px;
-        }
-
-        .lightbox-counter {
+        .lightbox-meta {
             position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--silver);
-            font-size: 1.2rem;
-            background: rgba(0, 31, 63, 0.8);
-            padding: 0.5rem 1.5rem;
-            border-radius: 25px;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .about-tagline {
-            font-style: italic;
-            color: var(--accent-gold);
-            margin-top: 2rem;
-            font-size: 1.3rem;
-        }
-
-        #contact {
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        footer {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 3rem 2rem 1rem;
-            text-align: center;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-links a {
-            color: var(--silver);
-            font-size: 1.8rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-gold);
-            transform: translateY(-3px);
-        }
-
-        .social-links .fa-instagram:hover {
-            color: #E4405F;
-        }
-
-        .social-links .fa-facebook:hover {
-            color: #1877F2;
-        }
-
-        .social-links .fa-youtube:hover {
-            color: #FF0000;
-        }
-
-        .social-links .fa-whatsapp:hover {
-            color: #25D366;
-        }
-
-        .footer-text {
-            color: var(--silver);
-            font-size: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            z-index: 999;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
-
-        .video-item {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .video-item iframe {
-            position: absolute;
-            top: 0;
+            right: 0;
+            bottom: -46px;
             left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 0.83rem;
         }
 
-        .gallery-section-title {
-            font-size: 1.8rem;
-            color: var(--accent-gold);
-            margin-bottom: 2rem;
-            text-align: center;
+        .lightbox-caption {
+            color: var(--ivory);
         }
 
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.75s ease, transform 0.75s cubic-bezier(.2,.8,.2,1);
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
+        .reveal.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes breathe {
+            0%, 100% { opacity: 0.65; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes loadingLine {
+            0% { transform: translateX(-110%); }
+            100% { transform: translateX(330%); }
+        }
+
+        @keyframes heroEnter {
+            from { opacity: 0; transform: translateY(28px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scrollLine {
+            0%, 100% { opacity: 0.3; transform: scaleY(0.65); transform-origin: top; }
+            50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+        }
+
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0) rotate(-3deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+
+        @keyframes pulseRing {
+            0% { opacity: 0.8; transform: scale(0.84); }
+            80%, 100% { opacity: 0; transform: scale(1.28); }
+        }
+
+        @media (max-width: 1180px) {
+            .services-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
-        @media (max-width: 1024px) {
             .gallery-masonry {
-                column-count: 2;
+                column-count: 3;
+            }
+
+            .about-grid {
+                gap: 45px;
+            }
+
+            .header-cta {
+                display: none;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            :root {
+                --header-height: 76px;
+            }
+
+            .section {
+                padding: 88px 0;
+            }
+
             .menu-toggle {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: min(390px, 88vw);
+                height: 100dvh;
                 display: flex;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(0, 31, 63, 0.98);
                 flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                gap: 1rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                pointer-events: none;
-                transition: all 0.3s ease;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 14px;
+                padding: 88px 42px 42px;
+                background: rgba(3, 17, 29, 0.98);
+                border-left: 1px solid var(--white-line);
+                box-shadow: -22px 0 60px rgba(0, 0, 0, 0.36);
+                transform: translateX(105%);
+                transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
+                backdrop-filter: blur(18px);
             }
 
-            .nav-links.active {
-                transform: translateY(0);
-                opacity: 1;
-                pointer-events: all;
+            .nav-menu.open {
+                transform: translateX(0);
             }
 
-            #home {
-                min-height: 100vh;
-                height: auto;
-                padding: 80px 1rem 2rem;
+            .nav-link {
+                font-family: "Cormorant Garamond", serif;
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            .hero::before {
+                background: linear-gradient(90deg, rgba(3, 17, 29, 0.93), rgba(3, 17, 29, 0.55)), linear-gradient(0deg, var(--ink), transparent 35%);
             }
 
             .hero-content {
-                padding: 1rem;
+                max-width: 760px;
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
+            .trust-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .hero-content p {
-                font-size: 1rem;
+            .trust-item:nth-child(2) {
+                border-right: 0;
             }
 
-            h2 {
-                font-size: 2rem;
+            .trust-item:nth-child(-n+2) {
+                border-bottom: 1px solid var(--white-line);
             }
 
-            section {
-                padding: 3rem 1rem;
-            }
-
-            .gallery-masonry {
-                column-count: 1;
-            }
-
-            .gallery-grid {
+            .process-grid,
+            .about-grid,
+            .contact-shell {
                 grid-template-columns: 1fr;
             }
 
-            .services-grid {
-                gap: 1.5rem;
+            .about-collage {
+                min-height: 560px;
+            }
+
+            .contact-panel {
+                border-top: 1px solid var(--white-line);
+                border-left: 0;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                width: min(calc(100% - 28px), var(--container));
+            }
+
+            .section {
+                padding: 76px 0;
+            }
+
+            .brand img {
+                height: 48px;
+            }
+
+            .hero {
+                min-height: 92svh;
+            }
+
+            .hero-content {
+                padding-top: 110px;
+                padding-bottom: 90px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3rem, 16vw, 5.25rem);
+            }
+
+            .hero-actions {
+                align-items: stretch;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .hero-note {
+                display: grid;
+                gap: 10px;
+            }
+
+            .scroll-cue {
+                display: none;
+            }
+
+            .trust-item {
+                min-height: 100px;
+                padding: 18px 12px;
+            }
+
+            .trust-item span {
+                display: none;
+            }
+
+            .services-grid,
+            .process-grid,
+            .films-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-media {
+                height: 230px;
+            }
+
+            .service-content > p:not(.eyebrow) {
+                min-height: 0;
+            }
+
+            .gallery-masonry {
+                column-count: 2;
+                column-gap: 10px;
+            }
+
+            .gallery-item {
+                margin-bottom: 10px;
+                border-radius: 14px;
+            }
+
+            .gallery-overlay {
+                padding: 14px;
+            }
+
+            .gallery-label {
+                font-size: 1.18rem;
+            }
+
+            .gallery-view {
+                width: 36px;
+                height: 36px;
+            }
+
+            .about-collage {
+                min-height: 460px;
+            }
+
+            .about-photo-main {
+                right: 7%;
+            }
+
+            .about-badge {
+                top: 18px;
+                width: 112px;
+                height: 112px;
+            }
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-main,
+            .contact-panel {
+                padding: 36px 26px;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+                gap: 38px;
+                padding-top: 58px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .lightbox {
+                padding: 74px 12px 68px;
+            }
+
+            .lightbox-stage {
+                height: 72vh;
             }
 
             .lightbox-prev,
             .lightbox-next {
-                font-size: 2rem;
-                padding: 0.5rem;
-                z-index: 1;
+                top: auto;
+                bottom: -54px;
+                width: 46px;
+                height: 46px;
+                transform: none;
             }
 
             .lightbox-prev {
-                left: 10px;
+                left: calc(50% - 58px);
             }
 
             .lightbox-next {
-                right: 10px;
+                right: calc(50% - 58px);
             }
 
-            .lightbox-close {
-                top: 10px;
-                right: 15px;
-                font-size: 2.5rem;
+            .lightbox-prev:hover,
+            .lightbox-next:hover {
+                transform: scale(1.05);
+            }
+
+            .lightbox-meta {
+                bottom: -108px;
+                justify-content: center;
+                text-align: center;
             }
 
             .lightbox-counter {
-                font-size: 1rem;
-                padding: 0.4rem 1rem;
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-masonry {
+                column-count: 1;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-item,
+            .trust-item:nth-child(2) {
+                border-right: 0;
+                border-bottom: 1px solid var(--white-line);
+            }
+
+            .trust-item:last-child {
+                border-bottom: 0;
+            }
+
+            .about-collage {
+                min-height: 390px;
+            }
+
+            .about-photo-small {
+                width: 46%;
+                height: 40%;
+                border-width: 5px;
+            }
+
+            .about-badge {
+                width: 94px;
+                height: 94px;
+                padding: 10px;
+            }
+
+            .about-badge strong {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader-inner">
+            <img src="https://i.postimg.cc/sxC0N0k2/Artboard-1-copy-5-crop-1.png" alt="">
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="container navbar">
+            <a class="brand" href="#home" aria-label="Neervaah Films home">
                 <img src="https://i.postimg.cc/sxC0N0k2/Artboard-1-copy-5-crop-1.png" alt="Neervaah Films Logo">
-            </div>
-            <div class="menu-toggle" id="menuToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav> 
+            </a>
+
+            <nav aria-label="Primary navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a class="nav-link active" href="#home">Home</a></li>
+                    <li><a class="nav-link" href="#services">Services</a></li>
+                    <li><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a class="header-cta" href="https://wa.me/919112162535?text=Hi%20Neervaah%20Films!%20I%20would%20like%20to%20book%20a%20photography%20session." target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Book a Session
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Open navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
-    <main>
-        <section id="home">
-            <div class="hero-content">
-                <h1>Professional Wedding Photography & Cinematography</h1>
-                <p>Creating timeless memories through weddings, pre-wedding shoots, maternity photography, and cinematic films that tell your unique story</p>
-                <a href="#contact" class="cta-button">Book Your Photography Session now</a>
+    <main id="main-content">
+        <section class="hero" id="home" aria-label="Neervaah Films introduction">
+            <div class="hero-slides" aria-hidden="true">
+                <div class="hero-slide active" style="--hero-image: url('photos/1.jpeg');"></div>
+                <div class="hero-slide" style="--hero-image: url('photos/15.JPG');"></div>
+                <div class="hero-slide" style="--hero-image: url('photos/22.jpg');"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-kicker">Wedding stories • Cinematic memories</p>
+                    <h1>Every frame holds a <span class="gold-text">feeling</span>.</h1>
+                    <p class="hero-copy">Professional wedding photography and cinematography crafted with emotion, elegance and a timeless editorial eye—across Mumbai, Pune and destinations throughout India.</p>
+
+                    <div class="hero-actions">
+                        <a class="button button-primary" href="#gallery">Explore Our Work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                        <a class="button button-secondary" href="https://wa.me/919112162535?text=Hi%20Neervaah%20Films!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20services." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Start a Conversation</a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Mumbai • Pune • Destination</span>
+                        <span><i class="fa-solid fa-camera" aria-hidden="true"></i> Photography & Cinematography</span>
+                        <span><i class="fa-solid fa-heart" aria-hidden="true"></i> Stories made personal</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="scroll-cue" href="#services">Scroll to discover</a>
+        </section>
+
+        <section class="trust-strip" aria-label="Service highlights">
+            <div class="container trust-grid">
+                <div class="trust-item reveal"><i class="fa-solid fa-camera-retro" aria-hidden="true"></i><div><strong>Editorial Photography</strong><span>Elegant, honest and timeless frames</span></div></div>
+                <div class="trust-item reveal"><i class="fa-solid fa-film" aria-hidden="true"></i><div><strong>Cinematic Films</strong><span>Emotion-led visual storytelling</span></div></div>
+                <div class="trust-item reveal"><i class="fa-solid fa-route" aria-hidden="true"></i><div><strong>Destination Ready</strong><span>Available across India</span></div></div>
+                <div class="trust-item reveal"><i class="fa-solid fa-comments" aria-hidden="true"></i><div><strong>Personal Planning</strong><span>A smooth, guided experience</span></div></div>
             </div>
         </section>
 
-        <section id="services">
-            <h2>Our Photography & Cinematography Services</h2>
-            <div class="services-grid">
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Indian Wedding Photography Services in Mumbai" class="service-image" loading="lazy">
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">What we create</p>
+                    <h2>Beautifully crafted stories for every chapter.</h2>
+                    <p class="section-copy">From wedding celebrations to growing families and brand campaigns, every experience is planned with care and captured with a refined visual style.</p>
+                </div>
+
+                <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Indian Wedding Photography Services in Mumbai" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-rings-wedding"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Wedding Photography</h3>
-                        <p>Elegant and timeless Indian wedding photography that captures every precious moment of your special day with artistry and emotion. Professional coverage of ceremonies, rituals, and celebrations.</p>
+                        <p>Elegant, emotion-led coverage of ceremonies, rituals and celebrations, captured with a timeless editorial finish.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/1024984/pexels-photo-1024984.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pre Wedding and Post Wedding Photoshoot" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/1024984/pexels-photo-1024984.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Pre Wedding and Post Wedding Photoshoot" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Pre & Post Wedding Shoots</h3>
-                        <p>Creative pre-wedding and post-wedding photography sessions that capture your love story in stunning outdoor and indoor locations with unique concepts and themes.</p>
+                        <p>Creative couple sessions shaped around your story, location and personality—from intimate portraits to cinematic concepts.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Corporate Event Photography and Coverage" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/2263436/pexels-photo-2263436.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Corporate Event Photography and Coverage" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-champagne-glasses"></i></span>
+                    </div>
                     <div class="service-content">
-                        <h3>Event Photography & Coverage</h3>
-                        <p>Professional documentation of corporate events, birthday celebrations, engagement parties, and special occasions with stunning visual storytelling and high-quality images.</p>
+                        <p class="eyebrow">Neervaah Films</p>
+                        <h3>Event Photography</h3>
+                        <p>Professional visual storytelling for engagements, birthdays, corporate events and milestone celebrations.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://i.postimg.cc/JhBQbz9M/Gemini-Generated-Image-fpntogfpntogfpnt.png?auto=compress&cs=tinysrgb&w=600" alt="Indian Baby Shower Dohale Photography" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://i.postimg.cc/JhBQbz9M/Gemini-Generated-Image-fpntogfpntogfpnt.png?auto=compress&cs=tinysrgb&w=1000" alt="Indian Baby Shower Dohale Photography" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-baby-carriage"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Baby Shower Photography</h3>
-                        <p>Capture the joy and excitement of your Indian baby shower (Dohale/Godh Bharai) celebration with beautiful, heartwarming photography that preserves precious memories.</p>
+                        <p>Warm, joyful coverage of Dohale and Godh Bharai celebrations, preserving every meaningful family moment.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://i.postimg.cc/25Bx4SPb/Gemini-Generated-Image-hriaojhriaojhria.png?auto=compress&cs=tinysrgb&w=600" alt="Maternity Photoshoot for Pregnant Women" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://i.postimg.cc/25Bx4SPb/Gemini-Generated-Image-hriaojhriaojhria.png?auto=compress&cs=tinysrgb&w=1000" alt="Maternity Photoshoot for Pregnant Women" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-person-pregnant"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Maternity Photography</h3>
-                        <p>Celebrate the beauty of pregnancy with elegant maternity photography sessions that honor this special journey. Indoor and outdoor shoots with traditional and modern themes.</p>
+                        <p>Elegant maternity portraits that celebrate the beauty, strength and emotion of this unforgettable journey.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Newborn Baby Photography Services" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/1648377/pexels-photo-1648377.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Newborn Baby Photography Services" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-baby"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Newborn & Baby Photography</h3>
-                        <p>Adorable newborn and baby photography sessions capturing precious early moments with tenderness, creativity, and attention to safety and comfort.</p>
+                        <p>Tender newborn and baby portraits created with patience, comfort and careful attention to the smallest details.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Commercial Photography and Videography" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Commercial Photography and Videography" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-camera-retro"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Commercial Projects</h3>
-                        <p>High-quality commercial photography and videography for brands, products, real estate, and promotional campaigns. Professional content for marketing and advertising.</p>
+                        <p>Polished photography and films for brands, products, real estate, campaigns and digital marketing.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cinematic Wedding Videography" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Cinematic Wedding Videography" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-film"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Cinematography & Films</h3>
-                        <p>Cinematic video production with professional editing, color grading, and post-production excellence. Creating emotional films that tell your story beautifully.</p>
+                        <p>Story-driven films with professional editing, colour grading and sound design that let every emotion live again.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
-                <article class="service-card">
-                    <img src="https://i.postimg.cc/qgVrvqVR/Gemini-Generated-Image-ow8ydmow8ydmow8y.png?auto=compress&cs=tinysrgb&w=600" alt="Custom Wedding Album Design" class="service-image" loading="lazy">
+                <article class="service-card reveal">
+                    <div class="service-media">
+                        <img src="https://i.postimg.cc/qgVrvqVR/Gemini-Generated-Image-ow8ydmow8ydmow8y.png?auto=compress&cs=tinysrgb&w=1000" alt="Custom Wedding Album Design" class="service-image" loading="lazy" decoding="async">
+                        <span class="service-icon" aria-hidden="true"><i class="fa-solid fa-book-open"></i></span>
+                    </div>
                     <div class="service-content">
+                        <p class="eyebrow">Neervaah Films</p>
                         <h3>Album Design & Printing</h3>
-                        <p>Custom-designed premium photo albums that beautifully preserve your memories in stunning layouts. High-quality printing and binding with elegant presentation.</p>
+                        <p>Premium album layouts and high-quality printing designed to turn your favourite frames into a lasting keepsake.</p>
+                        <a href="#contact" class="text-link">Enquire now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
                     </div>
                 </article>
+                </div>
             </div>
         </section>
 
-        <section id="gallery">
-            <h2>Our Photography Gallery & Portfolio</h2>
-            
-            <h3 class="gallery-section-title">Wedding & Event Photography</h3>
-            <p style="text-align: center; color: var(--silver); margin-bottom: 2rem;">
-                Follow us on Instagram for daily updates and stunning photography: 
-                <a href="https://www.instagram.com/neervaah_films/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: none;">@neervaah_films</a>
-            </p>
-            
-            <div style="max-width: 1400px; margin: 0 auto 3rem;">
+        <section class="section process-section" aria-labelledby="process-title">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">A calm, guided experience</p>
+                    <h2 id="process-title">From first conversation to final frame.</h2>
+                </div>
+
+                <div class="process-grid">
+                    <article class="process-card reveal">
+                        <i class="fa-regular fa-comments" aria-hidden="true"></i>
+                        <h3>Tell us your story</h3>
+                        <p>Share your date, celebration, ideas and the moments that matter most to you.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
+                        <h3>Plan it beautifully</h3>
+                        <p>We align on the visual direction, schedule, locations and the flow of your experience.</p>
+                    </article>
+                    <article class="process-card reveal">
+                        <i class="fa-regular fa-images" aria-hidden="true"></i>
+                        <h3>Relive every feeling</h3>
+                        <p>Your photographs and films are shaped into a meaningful collection you can return to for years.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-section" id="gallery">
+            <div class="container">
+                <div class="section-header reveal">
+                    <p class="eyebrow">Selected portfolio</p>
+                    <h2>Real moments. Honest emotions. Timeless photographs.</h2>
+                    <p class="section-copy">Explore the complete Neervaah Films collection. Tap any photograph to open the full-screen gallery.</p>
+                </div>
+
+                <div class="instagram-line reveal">
+                    <a href="https://www.instagram.com/neervaah_films/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Follow @neervaah_films for new stories</a>
+                </div>
+
+                <div class="gallery-toolbar reveal" role="group" aria-label="Filter gallery">
+                    <button class="gallery-filter active" type="button" data-filter="all">All</button>
+                    <button class="gallery-filter" type="button" data-filter="wedding">Wedding</button>
+                    <button class="gallery-filter" type="button" data-filter="portrait">Portrait</button>
+                    <button class="gallery-filter" type="button" data-filter="event">Event</button>
+                    <button class="gallery-filter" type="button" data-filter="couple">Couple</button>
+                    <button class="gallery-filter" type="button" data-filter="commercial">Commercial</button>
+                    <button class="gallery-filter" type="button" data-filter="destination">Destination</button>
+                </div>
+
                 <div class="gallery-masonry" id="photoGallery">
-                    <div class="gallery-item" data-index="0">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/1.jpeg" alt="Indian Wedding Ceremony Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Wedding</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="1">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/2.JPG" alt="Bride Portrait Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Portrait</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="2">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/3.JPG" alt="Cinematic Event Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Event</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="3">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/4.jpeg" alt="Couple Pre-Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Couple Shoot</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="4">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/5.jpeg" alt="Commercial Product Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Commercial</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="5">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/6.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="6">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/7.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="7">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/8.jpeg" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="8">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/9.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="9">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/10.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="10">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/11.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="11">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/12.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="12">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/13.jpg" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="13">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/14.jpeg" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="14">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/15.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="15">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/16.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="16">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/17.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="17">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/18.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="18">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/19.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="19">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/20.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="20">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/21.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" data-index="21">
-                        <img src="https://raw.githubusercontent.com/neervaahfilms/neervaahfilms/main/photos/22.jpg" alt="Outdoor Destination Wedding Photography" loading="lazy">
-                        <div class="gallery-overlay">
-                            <span>Destination</span>
-                        </div>
-                    </div>
+                    <figure class="gallery-item reveal" data-category="wedding" data-index="0">
+                        <img src="photos/1.jpeg" alt="Indian Wedding Ceremony Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Wedding</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="portrait" data-index="1">
+                        <img src="photos/2.JPG" alt="Bride Portrait Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Portrait</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="event" data-index="2">
+                        <img src="photos/3.JPG" alt="Cinematic Event Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Event</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="couple" data-index="3">
+                        <img src="photos/4.jpeg" alt="Couple Pre-Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Couple Shoot</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="commercial" data-index="4">
+                        <img src="photos/5.jpeg" alt="Commercial Product Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Commercial</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="5">
+                        <img src="photos/6.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="6">
+                        <img src="photos/7.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="7">
+                        <img src="photos/8.jpeg" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="8">
+                        <img src="photos/9.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="9">
+                        <img src="photos/10.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="10">
+                        <img src="photos/11.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="11">
+                        <img src="photos/12.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="12">
+                        <img src="photos/13.jpg" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="13">
+                        <img src="photos/14.jpeg" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="14">
+                        <img src="photos/15.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="15">
+                        <img src="photos/16.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="16">
+                        <img src="photos/17.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="17">
+                        <img src="photos/18.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="18">
+                        <img src="photos/19.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="19">
+                        <img src="photos/20.JPG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="20">
+                        <img src="photos/21.JPEG" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
+                    <figure class="gallery-item reveal" data-category="destination" data-index="21">
+                        <img src="photos/22.jpg" alt="Outdoor Destination Wedding Photography" loading="lazy" decoding="async">
+                        <figcaption class="gallery-overlay">
+                            <span class="gallery-label">Destination</span>
+                            <span class="gallery-view" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                        </figcaption>
+                    </figure>
                 </div>
-            </div>
 
-            <h3 class="gallery-section-title" style="margin-top: 4rem;">Cinematic Wedding Films & Videos</h3>
-            <div class="gallery-grid">
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/JsnBseaUAJc?si=ytKptyYQC0o71kZu" title="Latest Cinematic Wedding Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/CRk_Uc0jMTw?si=6-8x4BHZm8IaE7Q8" title="Recent Indian Wedding Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/Pcoqamp3lpo?si=mo1Ai-iBgdwt13F2" title="Pre-Wedding Cinematic Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/gWfQsxihVJ4?si=wDYZ3aDDoXHyXdUw" title="Event Highlights Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/5yCaNwoW8rg?si=6i0NM3lSeubTdm4u" title="Maternity Photoshoot Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/clI3dQbU4kg?si=ZPeiGld8wTVKgtGX" title="Baby Photography Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-                </div>
-                <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/kRmlnq0v6c0?si=3AY_6_s_oYSvc8P-" title="Baby Photography Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <div class="films-wrap">
+                    <div class="section-header reveal">
+                        <p class="eyebrow">Cinematic stories</p>
+                        <h2>Films that let the moment move again.</h2>
+                        <p class="section-copy">Watch the complete selection of wedding, pre-wedding, event, maternity and baby films.</p>
+                    </div>
+
+                    <div class="films-grid">
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/JsnBseaUAJc?si=ytKptyYQC0o71kZu" title="Latest Cinematic Wedding Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Latest Cinematic Wedding Film</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/CRk_Uc0jMTw?si=6-8x4BHZm8IaE7Q8" title="Recent Indian Wedding Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Recent Indian Wedding Film</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/Pcoqamp3lpo?si=mo1Ai-iBgdwt13F2" title="Pre-Wedding Cinematic Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Pre-Wedding Cinematic Video</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/gWfQsxihVJ4?si=wDYZ3aDDoXHyXdUw" title="Event Highlights Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Event Highlights Video</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/5yCaNwoW8rg?si=6i0NM3lSeubTdm4u" title="Maternity Photoshoot Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Maternity Photoshoot Film</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/clI3dQbU4kg?si=ZPeiGld8wTVKgtGX" title="Baby Photography Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Baby Photography Film</h3>
+                    </div>
+                </article>
+                <article class="film-card reveal">
+                    <div class="video-frame">
+                        <iframe src="https://www.youtube.com/embed/kRmlnq0v6c0?si=3AY_6_s_oYSvc8P-" title="Baby Photography Film" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div class="film-meta">
+                        <span><i class="fa-solid fa-clapperboard" aria-hidden="true"></i> Neervaah Films</span>
+                        <h3>Baby Photography Film</h3>
+                    </div>
+                </article>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Neervaah Films</h2>
-            <div class="about-content">
-                <p>At Neervaah Films, we believe that every moment deserves to be captured with passion, precision, and artistry. Our team of dedicated professional photographers and cinematographers brings years of experience in wedding photography, event coverage, and commercial videography to create visual narratives that resonate deeply with our clients.</p>
-                <p>We specialize in transforming fleeting moments into timeless treasures, combining technical excellence with creative vision to deliver stunning results that exceed expectations. From traditional Indian weddings to modern pre-wedding shoots, from intimate baby showers to grand celebrations, we document every emotion with authenticity and artistic flair.</p>
-                <p>Based in Mumbai, we serve clients across India and internationally, offering destination wedding photography services. Our commitment to quality, creativity, and customer satisfaction has made us one of the most trusted names in professional photography and cinematography.</p>
-                <p class="about-tagline">"Where every frame whispers emotions, and every story finds its eternal voice."</p>
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-collage reveal" aria-label="Neervaah Films photography collage">
+                    <figure class="about-photo about-photo-main"><img src="photos/15.JPG" alt="Neervaah Films destination wedding photography" loading="lazy" decoding="async"></figure>
+                    <figure class="about-photo about-photo-small"><img src="photos/4.jpeg" alt="Neervaah Films couple photography" loading="lazy" decoding="async"></figure>
+                    <div class="about-badge"><strong>Stories<br>with soul</strong></div>
+                </div>
+
+                <div class="about-copy reveal">
+                    <p class="eyebrow">About Neervaah Films</p>
+                    <h2>Photography that feels as meaningful as the moment itself.</h2>
+                    <p>At Neervaah Films, every celebration is approached with passion, precision and artistry. We combine thoughtful storytelling with technical excellence to create photographs and films that feel personal—not manufactured.</p>
+                    <p>From traditional Indian weddings and modern pre-wedding sessions to maternity, baby, event and commercial projects, our focus remains the same: genuine emotion, beautiful light and details that bring the story back to life.</p>
+
+                    <div class="about-points">
+                        <div class="about-point"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Natural, emotion-led storytelling</span></div>
+                        <div class="about-point"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Photography and cinematography</span></div>
+                        <div class="about-point"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Weddings, families, events and brands</span></div>
+                        <div class="about-point"><i class="fa-solid fa-check" aria-hidden="true"></i><span>Mumbai, Pune and destination shoots</span></div>
+                    </div>
+
+                    <blockquote class="about-quote">“Where every frame whispers emotions, and every story finds its eternal voice.”</blockquote>
+                </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Neervaah Films - Book Your Photography Session Now</h2>
-            <div class="contact-container">
-                <p style="text-align: center; font-size: 1.2rem; color: var(--silver); margin-bottom: 2rem;">
-                    Ready to capture your special moments? Contact us today to discuss your wedding photography, pre-wedding shoot, maternity photography, or event coverage needs. Our professional team is here to bring your vision to life.
-                </p>
-                <div style="text-align: center; display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:neervaahfilms@gmail.com" class="cta-button" style="font-size: 1.1rem;" aria-label="Email Neervaah Films">📧 Book via Email</a>
-                    <a href="tel:+919112162535" class="cta-button" style="font-size: 1.1rem;" aria-label="Call Neervaah Films">📞 Call Now</a>
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-shell reveal">
+                    <div class="contact-main">
+                        <p class="eyebrow">Let us create something unforgettable</p>
+                        <h2>Your story deserves to be remembered beautifully.</h2>
+                        <p>Tell us about your wedding, event, family milestone or creative project. We would love to understand your vision and help shape the right photography or film experience.</p>
+
+                        <div class="contact-actions">
+                            <a class="button button-primary" href="https://wa.me/919112162535?text=Hi%20Neervaah%20Films!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20services." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
+                            <a class="button button-secondary" href="mailto:neervaahfilms@gmail.com?subject=Photography%20Enquiry"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Send an Email</a>
+                        </div>
+                    </div>
+
+                    <aside class="contact-panel" aria-label="Contact details">
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                                <div><span>Call us</span><a href="tel:+919112162535">+91 91121 62535</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fa-regular fa-envelope" aria-hidden="true"></i></span>
+                                <div><span>Email</span><a href="mailto:neervaahfilms@gmail.com">neervaahfilms@gmail.com</a></div>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                                <div><span>Available in</span><strong>Mumbai, Pune & destinations across India</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="social-row" aria-label="Social media links">
+                            <a href="https://www.instagram.com/neervaah_films/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://facebook.com/neervaahfilms" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://youtube.com/@Neervaah_Films" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://wa.me/919112162535" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightboxClose">&times;</span>
-        <span class="lightbox-prev" id="lightboxPrev">&#10094;</span>
-        <span class="lightbox-next" id="lightboxNext">&#10095;</span>
-        <div class="lightbox-content">
-            <img src="" alt="Gallery Image" class="lightbox-image" id="lightboxImage">
-        </div>
-        <div class="lightbox-counter" id="lightboxCounter">1 / 7</div>
-    </div>
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-brand">
+                <img src="https://i.postimg.cc/sxC0N0k2/Artboard-1-copy-5-crop-1.png" alt="Neervaah Films">
+                <p>Professional wedding photography and cinematography in Mumbai, Pune and destinations across India—created with emotion, elegance and a timeless visual language.</p>
+            </div>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://www.instagram.com/neervaah_films/" target="_blank" rel="noopener noreferrer" aria-label="Follow Neervaah Films on Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com/neervaahfilms" target="_blank" rel="noopener noreferrer" aria-label="Like Neervaah Films on Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="https://youtube.com/@Neervaah_Films" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to Neervaah Films on YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://wa.me/919112162535" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Neervaah Films"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery & Films</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="tel:+919112162535">+91 91121 62535</a></li>
+                    <li><a href="mailto:neervaahfilms@gmail.com">neervaahfilms@gmail.com</a></li>
+                    <li><a href="https://www.instagram.com/neervaah_films/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li><a href="https://youtube.com/@Neervaah_Films" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                </ul>
+            </div>
         </div>
-        <p class="footer-text">&copy; 2024 Neervaah Films. All Rights Reserved.</p>
-        <p class="footer-text">Serving Professional Wedding Photography & Cinematography Services in Mumbai, Pune and Destinations Across India</p>
+
+        <div class="container footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Neervaah Films. All Rights Reserved.</p>
+            <p>Photography • Cinematography • Stories with soul</p>
+        </div>
     </footer>
 
-    <a href="https://wa.me/919112162535?text=Hi%20Neervaah%20Films!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close gallery"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-stage" id="lightboxStage">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="lightbox-meta">
+                <span class="lightbox-caption" id="lightboxCaption"></span>
+                <span class="lightbox-counter" id="lightboxCounter"></span>
+            </div>
+        </div>
+        <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <a class="whatsapp-float" href="https://wa.me/919112162535?text=Hi%20Neervaah%20Films!%20I%20would%20like%20to%20inquire%20about%20your%20photography%20services." target="_blank" rel="noopener noreferrer" aria-label="Contact Neervaah Films on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
+        (() => {
+            "use strict";
 
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+            const body = document.body;
+            const preloader = document.getElementById("preloader");
+            const header = document.getElementById("siteHeader");
+            const progress = document.getElementById("scrollProgress");
+            const backToTop = document.getElementById("backToTop");
+            const menuToggle = document.getElementById("menuToggle");
+            const navMenu = document.getElementById("navMenu");
+            const navLinks = [...document.querySelectorAll(".nav-link")];
+            const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-        // Close menu when clicking on a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+            const hidePreloader = () => {
+                preloader.classList.add("is-hidden");
+                window.setTimeout(() => preloader.remove(), 700);
+            };
 
-        // Lightbox functionality
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxPrev = document.getElementById('lightboxPrev');
-        const lightboxNext = document.getElementById('lightboxNext');
-        const lightboxCounter = document.getElementById('lightboxCounter');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        
-        let currentIndex = 0;
-        const images = [];
+            window.addEventListener("load", hidePreloader, { once: true });
+            window.setTimeout(hidePreloader, 2600);
 
-        // Collect all gallery images
-        galleryItems.forEach((item, index) => {
-            const img = item.querySelector('img');
-            images.push({
-                src: img.src,
-                alt: img.alt
-            });
-
-            item.addEventListener('click', () => {
-                openLightbox(index);
-            });
-        });
-
-        function openLightbox(index) {
-            currentIndex = index;
-            updateLightboxImage();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function updateLightboxImage() {
-            lightboxImage.src = images[currentIndex].src;
-            lightboxImage.alt = images[currentIndex].alt;
-            lightboxCounter.textContent = `${currentIndex + 1} / ${images.length}`;
-        }
-
-        function showPrevImage() {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateLightboxImage();
-        }
-
-        function showNextImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateLightboxImage();
-        }
-
-        // Event listeners
-        lightboxClose.addEventListener('click', closeLightbox);
-        lightboxPrev.addEventListener('click', showPrevImage);
-        lightboxNext.addEventListener('click', showNextImage);
-
-        // Close lightbox when clicking outside the image
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
-                closeLightbox();
+            function updateScrollUI() {
+                const top = window.scrollY;
+                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+                const percentage = scrollable > 0 ? (top / scrollable) * 100 : 0;
+                progress.style.width = `${percentage}%`;
+                header.classList.toggle("is-scrolled", top > 20);
+                backToTop.classList.toggle("visible", top > 650);
             }
-        });
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
+            updateScrollUI();
+            window.addEventListener("scroll", updateScrollUI, { passive: true });
 
-            if (e.key === 'Escape') {
-                closeLightbox();
-            } else if (e.key === 'ArrowLeft') {
-                showPrevImage();
-            } else if (e.key === 'ArrowRight') {
-                showNextImage();
+            backToTop.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+            });
+
+            function closeMenu() {
+                navMenu.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                body.classList.remove("menu-open");
             }
-        });
+
+            menuToggle.addEventListener("click", () => {
+                const open = navMenu.classList.toggle("open");
+                menuToggle.setAttribute("aria-expanded", String(open));
+                menuToggle.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
+                body.classList.toggle("menu-open", open);
+            });
+
+            navLinks.forEach(link => link.addEventListener("click", closeMenu));
+
+            document.addEventListener("click", event => {
+                if (navMenu.classList.contains("open") && !navMenu.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
+            });
+
+            const revealElements = [...document.querySelectorAll(".reveal")];
+            if (reducedMotion || !("IntersectionObserver" in window)) {
+                revealElements.forEach(element => element.classList.add("in-view"));
+            } else {
+                const revealObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("in-view");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: "0px 0px -40px" });
+
+                revealElements.forEach((element, index) => {
+                    element.style.transitionDelay = `${Math.min((index % 3) * 80, 160)}ms`;
+                    revealObserver.observe(element);
+                });
+            }
+
+            const sections = [...document.querySelectorAll("main section[id]")];
+            if ("IntersectionObserver" in window) {
+                const sectionObserver = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`));
+                    });
+                }, { rootMargin: "-38% 0px -55%", threshold: 0 });
+                sections.forEach(section => sectionObserver.observe(section));
+            }
+
+            const slides = [...document.querySelectorAll(".hero-slide")];
+            let slideIndex = 0;
+            if (!reducedMotion && slides.length > 1) {
+                window.setInterval(() => {
+                    slides[slideIndex].classList.remove("active");
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    slides[slideIndex].classList.add("active");
+                }, 5600);
+            }
+
+            const galleryItems = [...document.querySelectorAll(".gallery-item")];
+            const galleryImages = [...document.querySelectorAll(".gallery-item img")];
+
+            galleryImages.forEach(img => {
+                const markLoaded = () => img.classList.add("is-loaded");
+                if (img.complete && img.naturalWidth > 0) markLoaded();
+                else img.addEventListener("load", markLoaded, { once: true });
+
+                img.addEventListener("error", () => {
+                    img.style.display = "none";
+                    img.closest(".gallery-item")?.classList.add("image-error");
+                }, { once: true });
+            });
+
+            document.querySelectorAll(".service-image, .about-photo img").forEach(img => {
+                img.addEventListener("error", () => {
+                    img.style.opacity = "0";
+                    img.parentElement.style.background = "linear-gradient(135deg, #0b2438, #03111d)";
+                }, { once: true });
+            });
+
+            const filterButtons = [...document.querySelectorAll(".gallery-filter")];
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const filter = button.dataset.filter;
+                    filterButtons.forEach(item => item.classList.toggle("active", item === button));
+                    galleryItems.forEach(item => {
+                        const show = filter === "all" || item.dataset.category === filter;
+                        item.classList.toggle("is-hidden", !show);
+                    });
+                });
+            });
+
+            const lightbox = document.getElementById("lightbox");
+            const lightboxStage = document.getElementById("lightboxStage");
+            const lightboxImage = document.getElementById("lightboxImage");
+            const lightboxCaption = document.getElementById("lightboxCaption");
+            const lightboxCounter = document.getElementById("lightboxCounter");
+            const lightboxClose = document.getElementById("lightboxClose");
+            const lightboxPrev = document.getElementById("lightboxPrev");
+            const lightboxNext = document.getElementById("lightboxNext");
+            let lightboxItems = [];
+            let currentImageIndex = 0;
+            let touchStartX = 0;
+
+            const visibleGalleryItems = () => galleryItems.filter(item => !item.classList.contains("is-hidden") && !item.classList.contains("image-error"));
+
+            function updateLightbox() {
+                const item = lightboxItems[currentImageIndex];
+                if (!item) return;
+                const img = item.querySelector("img");
+                lightboxImage.src = img.currentSrc || img.src;
+                lightboxImage.alt = img.alt;
+                lightboxCaption.textContent = img.alt;
+                lightboxCounter.textContent = `${currentImageIndex + 1} / ${lightboxItems.length}`;
+
+                [currentImageIndex - 1, currentImageIndex + 1].forEach(index => {
+                    const normalized = (index + lightboxItems.length) % lightboxItems.length;
+                    const adjacent = lightboxItems[normalized]?.querySelector("img");
+                    if (adjacent) new Image().src = adjacent.currentSrc || adjacent.src;
+                });
+            }
+
+            function openLightbox(item) {
+                lightboxItems = visibleGalleryItems();
+                currentImageIndex = Math.max(0, lightboxItems.indexOf(item));
+                updateLightbox();
+                lightbox.classList.add("active");
+                lightbox.setAttribute("aria-hidden", "false");
+                body.classList.add("lightbox-open");
+                lightboxClose.focus();
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove("active");
+                lightbox.setAttribute("aria-hidden", "true");
+                body.classList.remove("lightbox-open");
+            }
+
+            function showNextImage() {
+                currentImageIndex = (currentImageIndex + 1) % lightboxItems.length;
+                updateLightbox();
+            }
+
+            function showPreviousImage() {
+                currentImageIndex = (currentImageIndex - 1 + lightboxItems.length) % lightboxItems.length;
+                updateLightbox();
+            }
+
+            galleryItems.forEach(item => {
+                item.tabIndex = 0;
+                item.setAttribute("role", "button");
+                item.setAttribute("aria-label", `Open ${item.querySelector("img").alt}`);
+                item.addEventListener("click", () => openLightbox(item));
+                item.addEventListener("keydown", event => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        openLightbox(item);
+                    }
+                });
+            });
+
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightboxPrev.addEventListener("click", showPreviousImage);
+            lightboxNext.addEventListener("click", showNextImage);
+
+            lightbox.addEventListener("click", event => {
+                if (event.target === lightbox || event.target === lightboxStage) closeLightbox();
+            });
+
+            lightboxStage.addEventListener("touchstart", event => {
+                touchStartX = event.changedTouches[0].screenX;
+            }, { passive: true });
+
+            lightboxStage.addEventListener("touchend", event => {
+                const change = event.changedTouches[0].screenX - touchStartX;
+                if (Math.abs(change) < 45) return;
+                change < 0 ? showNextImage() : showPreviousImage();
+            }, { passive: true });
+
+            document.addEventListener("keydown", event => {
+                if (!lightbox.classList.contains("active")) return;
+                if (event.key === "Escape") closeLightbox();
+                if (event.key === "ArrowRight") showNextImage();
+                if (event.key === "ArrowLeft") showPreviousImage();
+            });
+
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        })();
     </script>
 </body>
 </html>
